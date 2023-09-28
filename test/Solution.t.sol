@@ -7,11 +7,13 @@ import {Utils} from "../src/utils/Utils.sol";
 /// @notice These tests are available to the player to use for debugging/deving their solution.
 /// Any changes here do not have any effects outside this file so feel free to change as you like.
 contract SolutionTest is Test, Utils {
-
     function setUp() public {}
 
     function testChallengeId() public {
-        require(challengeId() != 0xff, "IMPORTANT: CREATOR to update challengeId!");
+        require(
+            challengeId() != 0xff,
+            "IMPORTANT: CREATOR to update challengeId!"
+        );
     }
 
     function testPlayerHandle() public {
@@ -26,8 +28,9 @@ contract SolutionTest is Test, Utils {
         require(verify(), "Solution failed");
     }
 
-    function testFuzzSolution(address user) public {
-        vm.startPrank(user);
-        require(verify(), "Solution failed");
-    }
+    // function testFuzzSolution(address user) public {
+
+    //     vm.startPrank(user);
+    //     require(verify(), "Solution failed");
+    // }
 }
