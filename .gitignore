@@ -3,7 +3,7 @@ cache/
 out/
 
 # Foundry
-lib/
+# lib/
 
 # Ignores development broadcast logs
 !/broadcast
